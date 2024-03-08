@@ -1,0 +1,7 @@
+Cryptography.sln.DotSettings.user
+.idea/
+.vs/
+Cryptography.DataEncryptionStandard.Tests/bin/
+Cryptography.DataEncryptionStandard.Tests/obj/
+Cryptography.DataEncryptionStandard/bin/
+Cryptography.DataEncryptionStandard/obj/
