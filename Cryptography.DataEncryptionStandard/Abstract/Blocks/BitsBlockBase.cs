@@ -1,10 +1,13 @@
 ﻿namespace Cryptography.DataEncryptionStandard.Abstract.Blocks
 {
-    internal abstract class BitsBlockBase
+    public abstract class BitsBlockBase
     {
-        public byte[] Bits { get; set; }
-        public abstract byte FirstBit { get; }
-        public abstract byte LastBit { get; }
+        public override int BlockSize { get; } 
+        public byte this[int i] => Bits[i];
+        public byte[] Bits { get; protected set; }
+
+        public byte FirstBit => Bits[0];
+        public byte LastBit => Bits[^1];
         protected BitsBlockBase(byte[] bits)
         {
             Bits = bits;

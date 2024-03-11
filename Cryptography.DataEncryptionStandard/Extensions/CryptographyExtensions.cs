@@ -1,15 +1,17 @@
 ﻿namespace Cryptography.DataEncryptionStandard.Extensions
 {
+	using Blocks;
+
 	public static class CryptographyExtensions
 	{
-		public static int[] ConvertByteToBits(this byte singleByte)
+		public static byte[] ConvertByteToBits(this byte singleByte)
 		{
-			int[] bits = new int[8];
+			byte[] bits = new byte[8];
 			int index = 0;
 			for (int i = 7; i >= 0; i--)
 			{
 				int singleBit = singleByte >> i & 1;
-				bits[index] = singleBit;
+				bits[index] = (byte) singleBit;
 				index++;
 			}
 			return bits;
@@ -28,6 +30,8 @@
 			}
 			return b;
 		}
+		
+		
 
 		public static string DisplayBits(this int[] bitsArray)
 		{
